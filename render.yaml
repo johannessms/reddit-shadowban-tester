@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: shadowban-tester
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run shadowbantester.py
+    envVars:
+      - key: REDDIT_CLIENT_ID
+        sync: false
+      - key: REDDIT_CLIENT_SECRET
+        sync: false
+      - key: REDDIT_USER_AGENT
+        sync: false 
